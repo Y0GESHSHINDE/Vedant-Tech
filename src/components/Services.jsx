@@ -54,10 +54,10 @@ function Services() {
   }));
 
   return (
-    <section className="py-10 ">
+    <section id="services" className=" py-20 bg-[#ecf8f8] ">
       {/* Title Section */}
       <div className="text-center mb-8 items-center">
-        <h1 className="inline-block bg-blue-600 text-white px-8 py-3  md:text-2xl font-bold rounded-lg shadow-lg">
+        <h1 className="inline-block text-black px-8 py-3  md:text-2xl font-bold rounded-lg ">
           Our Services
         </h1>
       </div>

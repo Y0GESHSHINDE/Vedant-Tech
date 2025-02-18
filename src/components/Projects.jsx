@@ -5,7 +5,7 @@ const projectsData = [
   {
     name: "Fiber Optic Network for XYZ Corp",
     image:
-      "https://cdn.pixabay.com/photo/2016/12/07/18/06/fiber-optic-1890250_1280.jpg",
+      "h../../../../public/images/Services/fiber.jpg",
     description:
       "Deployed a high-speed fiber optic network to enhance connectivity and reduce downtime.",
     client: "XYZ Corporation",
@@ -15,7 +15,7 @@ const projectsData = [
   {
     name: "Smart Security System for ABC Mall",
     image:
-      "https://cdn.pixabay.com/photo/2017/05/24/12/39/security-camera-2334600_1280.jpg",
+      "../../public/images/Services/home1.png",
     description:
       "Installed 50+ AI-powered security cameras for real-time monitoring and enhanced safety.",
     client: "ABC Mall",
@@ -25,7 +25,7 @@ const projectsData = [
   {
     name: "Enterprise LAN Setup for TechHub",
     image:
-      "https://cdn.pixabay.com/photo/2017/05/11/11/38/network-2307148_1280.jpg",
+      "../../public/images/Services/p2p.png",
     description:
       "Designed a secure and scalable LAN/WAN infrastructure for seamless office networking.",
     client: "TechHub Pvt Ltd",
@@ -35,11 +35,21 @@ const projectsData = [
   {
     name: "Cloud Networking for DEF Industries",
     image:
-      "https://cdn.pixabay.com/photo/2016/11/29/04/45/cloud-1869231_1280.jpg",
+      "../../public/images/Services/cctv2.jpg",
     description:
       "Migrated enterprise operations to a secure and scalable cloud network infrastructure.",
     client: "DEF Industries",
     duration: "5 Months",
+    status: "Completed",
+  },
+  {
+    name: "CCTV Surveillance for GHI Factory",
+    image:
+      "../../public/images/Services/cctv2.jpg",
+    description:
+      "Implemented a 24/7 surveillance system with remote monitoring for industrial safety.",
+    client: "GHI Factory",
+    duration: "3 Months",
     status: "Completed",
   },
   {
@@ -58,9 +68,9 @@ function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div className="bg-[#CDC2A5] py-6 px-6 text-center items-center">
+    <div  id="projects" className="bg-[#ecf8f8] pt-20 px-6 text-center items-center">
       <div className="text-center mb-8">
-        <h1 className="inline-block bg-blue-600 text-white px-8 py-3  md:text-2xl font-bold rounded-lg shadow-lg">
+        <h1 className="inline-block  text-black px-8 py-3  md:text-2xl font-bold rounded-lg ">
           Our Projects
         </h1>
       </div>
@@ -97,8 +107,8 @@ function Projects() {
       </div>
 
       <button
-        className="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
-        onClick={() => setSelectedProject(projectsData[0])}>
+        className="mt-6 bg-[#326273] text-white px-6 mt-16 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
+        onClick={() => setSelectedProject(projectsData[3  ])}>
         View More Projects
       </button>
       

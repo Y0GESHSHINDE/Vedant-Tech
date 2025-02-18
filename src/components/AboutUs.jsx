@@ -7,26 +7,46 @@ import {
   FaUserCheck,
 } from "react-icons/fa";
 import "../../public/font/font.css";
+import { Link } from "react-scroll";
 
 function AboutUs() {
   return (
-    <div className="  bg-[#D4BEE4] py-6 px-6 bg- ">
+    <div id="about" className=" bg-[#ecf8f8]  text-center py-20  px-6 bg- ">
+
+       <div className=" animate-fadeIn delay-300 text-black">
+          <h3 className="text-2xl md:text-3xl font-semibold">
+            <span className="text-[40px] font-bold text-[#36c3ff]">
+              The #1 Choice
+            </span>{" "}
+            for
+          </h3>
+          <h4 className="text-[20px] md:text-[20px] ">
+            Security, Networking & IT in
+          </h4>
+          <h1 className="text-3xl md:text-6xl josefin-sans-bold">
+            Ahilyanagar & Nashik
+          </h1>
+          <div className="mt-16 ">
+            <Link
+              to="contact" smooth={true} duration={500} 
+              href=""
+              className="bg-[#326273] px-6 py-3  text-white text-[18px]  rounded-lg font-semibold">
+              Get Expert call
+            </Link>
+          </div>
+        </div>
       {/* Title Section */}
-      <div className="text-center mb-8">
-        <h1 className="inline-block bg-blue-600 text-white px-8 py-3  md:text-2xl font-bold rounded-lg shadow-lg">
-          About Us
-        </h1>
-      </div>
+      
 
       {/* Who We Are */}
-      <div className="max-w-5xl mx-auto bg-white p-8 shadow-2xl rounded-lg mb-12 flex flex-col md:flex-row items-center">
+      <div className="max-w-5xl mx-auto p-8 mt-7  rounded-lg mb-12 flex flex-col md:flex-row items-center">
         <img
           src="../../public/images/wifi1.jpg"
           alt="Vedant Tech Logo"
           className="w-60 h-60 sm:w-80 rounded-lg shadow-md mb-4 md:mb-0 md:mr-6"
         />
         <div >
-          <h1 className="text-3xl  font-bold text-center  text-gray-800 mb-4 merriweather-regular ">
+          <h1 className="text-3xl  font-bold text-center text-gray-800 mb- merriweather-regular ">
             Vedant Tech
           </h1>
           <p className="josefin-sans-regula text-[16px] md:text-[18px] text-center md:text-left text-gray-600 ">
