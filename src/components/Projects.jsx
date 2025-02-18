@@ -97,7 +97,7 @@ function Projects() {
       </div>
 
       <button
-        className="mt-6 bg-[#326273] text-white px-6 mt-16 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
+        className="mt-6 bg-[#326273] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
         onClick={() => setSelectedProject(projectsData[3])}>
         View More Projects
       </button>
