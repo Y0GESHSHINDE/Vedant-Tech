@@ -60,7 +60,7 @@ function Projects() {
   return (
     <div id="projects" className="bg-[#ecf8f8] pt-20 px-6 text-center items-center">
       <div className="text-center mb-8">
-        <h1 className="inline-block text-black px-8 py-3 md:text-2xl font-bold rounded-lg ">
+        <h1 className="inline-block text-black px-8 py-3 text-[20px] md:text-2xl font-bold rounded-lg ">
           Our Projects
         </h1>
       </div>

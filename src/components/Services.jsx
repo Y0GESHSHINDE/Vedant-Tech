@@ -70,7 +70,7 @@ function Services() {
   return (
     <section id="services" className=" py-20 bg-[#ecf8f8] ">
       <div className="text-center mb-8 items-center">
-        <h1 className="inline-block text-black px-8 py-3  md:text-2xl font-bold rounded-lg ">
+        <h1 className="inline-block text-black px-8 py-3 text-[20px] md:text-2xl font-bold rounded-lg ">
           Our Services
         </h1>
       </div>
