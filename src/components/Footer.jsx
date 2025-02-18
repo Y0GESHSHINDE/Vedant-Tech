@@ -1,5 +1,14 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import { Link } from "react-scroll";
 
 function Footer() {
   return (
@@ -11,7 +20,8 @@ function Footer() {
             Vdeant Tech
           </h2>
           <p className="mt-2 text-gray-400">
-            Your trusted partner in high-speed internet, IT infrastructure, and security solutions.
+            Your trusted partner in high-speed internet, IT infrastructure, and
+            security solutions.
           </p>
         </div>
 
@@ -19,10 +29,31 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
           <ul className="text-gray-400 space-y-2">
-            <li><a href="#" className="hover:text-white">Services</a></li>
-            <li><a href="#" className="hover:text-white">Projects</a></li>
-            <li><a href="#" className="hover:text-white">About Us</a></li>
-            <li><a href="#" className="hover:text-white">Contact</a></li>
+            <li>
+              <Link
+                to="services"
+                smooth={true}
+                duration={500}
+                href="#"
+                className="hover:text-white">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="#"  to="projects" smooth={true} duration={500} className="hover:text-white">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link  href="#"  to="about" smooth={true} duration={500} className="hover:text-white">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="contact" smooth={true} duration={500} href="#" className="hover:text-white">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -31,13 +62,14 @@ function Footer() {
           <h3 className="text-lg font-semibold mb-2">Contact Info</h3>
           <ul className="text-gray-400 space-y-2">
             <li className="flex items-center">
-              <FaEnvelope className="mr-2" /> info@vdeanttech.com
+              <FaEnvelope className="mr-2" /> vedanttech40@gmail.com
             </li>
             <li className="flex items-center">
-              <FaPhone className="mr-2" /> +91 93739 12269
+              <FaPhone className="mr-2" /> tel-  6262404040
             </li>
             <li className="flex items-center">
-              <FaMapMarkerAlt className="mr-2" /> Sangamner, Maharashtra, India
+              <FaMapMarkerAlt  className="mr-2 text-[30px]" /> 1st Floor, Sai Plaza ,Akole Bypass Road ,Vitthal Nagar, Sangamner
+              Ahilyanagar 422605
             </li>
           </ul>
         </div>
@@ -46,10 +78,18 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white"><FaLinkedinIn /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaFacebookF /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaTwitter /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaInstagram /></a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaLinkedinIn />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaFacebookF />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaTwitter />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaInstagram />
+            </a>
           </div>
         </div>
       </div>

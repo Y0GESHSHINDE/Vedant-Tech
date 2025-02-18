@@ -2,8 +2,7 @@ import React from "react";
 import { FaNetworkWired, FaShieldAlt, FaCloud, FaHome, FaUserCheck } from "react-icons/fa";
 import "../../public/font/font.css";
 import { Link } from "react-scroll";
-import wifi1 from "../../public/images/wifi1.jpg";
-
+import vedant from "../../public/images/vedant.png"
 function AboutUs() {
   return (
     <div id="about" className=" bg-[#ecf8f8]  text-center py-20  px-6 bg- ">
@@ -33,7 +32,7 @@ function AboutUs() {
 
       <div className="max-w-5xl mx-auto p-8 mt-7  rounded-lg mb-12 flex flex-col md:flex-row items-center">
         <img
-          src={wifi1}
+          src={vedant}
           alt="Vedant Tech Logo"
           className="w-60 h-60 sm:w-80 rounded-lg shadow-md mb-4 md:mb-0 md:mr-6"
         />
