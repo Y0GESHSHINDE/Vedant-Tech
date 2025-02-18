@@ -34,7 +34,7 @@ function Footer() {
               <FaEnvelope className="mr-2" /> info@vdeanttech.com
             </li>
             <li className="flex items-center">
-              <FaPhone className="mr-2" /> +91 93739 79469
+              <FaPhone className="mr-2" /> +91 93739 12269
             </li>
             <li className="flex items-center">
               <FaMapMarkerAlt className="mr-2" /> Sangamner, Maharashtra, India

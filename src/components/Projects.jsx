@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { FaProjectDiagram } from "react-icons/fa";
 
+// Import images
+import fiberImage from "../../public/images/Services/fiber.jpg";
+import home1Image from "../../public/images/Services/home1.png";
+import p2pImage from "../../public/images/Services/p2p.png";
+import cctv2Image from "../../public/images/Services/cctv2.jpg";
 const projectsData = [
   {
     name: "Fiber Optic Network for XYZ Corp",
-    image:
-      "h../../../../public/images/Services/fiber.jpg",
+    image: fiberImage,
     description:
       "Deployed a high-speed fiber optic network to enhance connectivity and reduce downtime.",
     client: "XYZ Corporation",
@@ -14,8 +18,7 @@ const projectsData = [
   },
   {
     name: "Smart Security System for ABC Mall",
-    image:
-      "../../public/images/Services/home1.png",
+    image: home1Image,
     description:
       "Installed 50+ AI-powered security cameras for real-time monitoring and enhanced safety.",
     client: "ABC Mall",
@@ -24,8 +27,7 @@ const projectsData = [
   },
   {
     name: "Enterprise LAN Setup for TechHub",
-    image:
-      "../../public/images/Services/p2p.png",
+    image: p2pImage,
     description:
       "Designed a secure and scalable LAN/WAN infrastructure for seamless office networking.",
     client: "TechHub Pvt Ltd",
@@ -34,8 +36,7 @@ const projectsData = [
   },
   {
     name: "Cloud Networking for DEF Industries",
-    image:
-      "../../public/images/Services/cctv2.jpg",
+    image: cctv2Image,
     description:
       "Migrated enterprise operations to a secure and scalable cloud network infrastructure.",
     client: "DEF Industries",
@@ -44,18 +45,7 @@ const projectsData = [
   },
   {
     name: "CCTV Surveillance for GHI Factory",
-    image:
-      "../../public/images/Services/cctv2.jpg",
-    description:
-      "Implemented a 24/7 surveillance system with remote monitoring for industrial safety.",
-    client: "GHI Factory",
-    duration: "3 Months",
-    status: "Completed",
-  },
-  {
-    name: "CCTV Surveillance for GHI Factory",
-    image:
-      "https://cdn.pixabay.com/photo/2016/11/18/17/21/monitoring-1834291_1280.jpg",
+    image: cctv2Image,
     description:
       "Implemented a 24/7 surveillance system with remote monitoring for industrial safety.",
     client: "GHI Factory",
@@ -68,9 +58,9 @@ function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div  id="projects" className="bg-[#ecf8f8] pt-20 px-6 text-center items-center">
+    <div id="projects" className="bg-[#ecf8f8] pt-20 px-6 text-center items-center">
       <div className="text-center mb-8">
-        <h1 className="inline-block  text-black px-8 py-3  md:text-2xl font-bold rounded-lg ">
+        <h1 className="inline-block text-black px-8 py-3 md:text-2xl font-bold rounded-lg ">
           Our Projects
         </h1>
       </div>
@@ -82,7 +72,7 @@ function Projects() {
       <h3 className="text-lg mt-5 font-semibold text-gray-600 mb-6 bg-blue-100 py-2 px-4 inline-block rounded-md">
         30+ Happy Customers 🚀
       </h3>
-      
+
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         {projectsData.slice(0, 3).map((project, index) => (
           <div
@@ -108,10 +98,9 @@ function Projects() {
 
       <button
         className="mt-6 bg-[#326273] text-white px-6 mt-16 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
-        onClick={() => setSelectedProject(projectsData[3  ])}>
+        onClick={() => setSelectedProject(projectsData[3])}>
         View More Projects
       </button>
-      
 
       {selectedProject && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-6">
