@@ -2,35 +2,35 @@ import React, { useState } from "react";
 import { FaProjectDiagram } from "react-icons/fa";
 
 // Import images
-import fiberImage from "../../public/images/Services/fiber.jpg";
-import home1Image from "../../public/images/Services/home1.png";
-import p2pImage from "../../public/images/Services/p2p.png";
+import sai from "../../public/images/sai_mandir.jpg";
+import smbt from "../../public/images/smbt.jpg";
+import amrutvahini from "../../public/images/amrutvahini.jpg";
 import cctv2Image from "../../public/images/Services/cctv2.jpg";
 const projectsData = [
   {
-    name: "Fiber Optic Network for XYZ Corp",
-    image: fiberImage,
+    name: " Live broadcast for Shri Saibaba Sansthan Trust",
+    image: sai,
     description:
       "Deployed a high-speed fiber optic network to enhance connectivity and reduce downtime.",
-    client: "XYZ Corporation",
+    client: "Shri Saibaba Sansthan Trust",
     duration: "3 Months",
     status: "Completed",
   },
   {
-    name: "Smart Security System for ABC Mall",
-    image: home1Image,
+    name: "Smart Security System for SMBT Hospital",
+    image: smbt,
     description:
       "Installed 50+ AI-powered security cameras for real-time monitoring and enhanced safety.",
-    client: "ABC Mall",
+    client: "SMBT Hospital",
     duration: "2 Months",
     status: "Completed",
   },
   {
-    name: "Enterprise LAN Setup for TechHub",
-    image: p2pImage,
+    name: "Enterprise LAN & Secutity for Amrutvahini College",
+    image: amrutvahini,
     description:
       "Designed a secure and scalable LAN/WAN infrastructure for seamless office networking.",
-    client: "TechHub Pvt Ltd",
+    client: "Amrutvahini College",
     duration: "4 Months",
     status: "Ongoing",
   },
