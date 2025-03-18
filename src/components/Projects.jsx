@@ -1,55 +1,60 @@
 import React, { useState } from "react";
-import { FaProjectDiagram } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaTimes } from "react-icons/fa";
 
 // Import images
 import sai from "../../public/images/sai_mandir.jpg";
 import smbt from "../../public/images/smbt.jpg";
 import amrutvahini from "../../public/images/amrutvahini.jpg";
 import cctv2Image from "../../public/images/Services/cctv2.jpg";
+
 const projectsData = [
   {
-    name: " Live broadcast for Shri Saibaba Sansthan Trust",
+    name: "Shree Sai Baba Sansthan, Shirdi",
     image: sai,
     description:
-      "Deployed a high-speed fiber optic network to enhance connectivity and reduce downtime.",
-    client: "Shri Saibaba Sansthan Trust",
-    duration: "3 Months",
+      "Completed live streaming of Sai Baba darshan across the entire campus. Currently deploying advanced surveillance and IT systems.",
+    client: "Shree Sai Baba Sansthan",
     status: "Completed",
   },
   {
-    name: "Smart Security System for SMBT Hospital",
+    name: "SMBT Institute",
     image: smbt,
     description:
-      "Installed 50+ AI-powered security cameras for real-time monitoring and enhanced safety.",
-    client: "SMBT Hospital",
-    duration: "2 Months",
+      "Installed 200 surveillance cameras and an EPABX system across the campus. Implemented a centralised monitoring system for security.",
+    client: "SMBT Institute",
     status: "Completed",
   },
   {
-    name: "Enterprise LAN & Secutity for Amrutvahini College",
+    name: "Sangamner City Surveillance Project",
+    image: cctv2Image,
+    description:
+      "Developed a city-wide surveillance system under the guidance of the Superintendent of Police, Ahillyanagar. Integrated a large-scale monitoring room at Sangamner police station, enabling direct PTZ camera control.",
+    client: "Sangamner Police Station",
+    status: "Completed",
+  },
+  {
+    name: "Amrutvahini College of Engineering",
     image: amrutvahini,
     description:
-      "Designed a secure and scalable LAN/WAN infrastructure for seamless office networking.",
-    client: "Amrutvahini College",
-    duration: "4 Months",
+      "Set up servers for the computer lab and call centre. Installed networking systems across the campus.",
+    client: "Amrutvahini COE",
     status: "Ongoing",
   },
   {
-    name: "Cloud Networking for DEF Industries",
+    name: "Life Line Hospital, Sangamner",
     image: cctv2Image,
     description:
-      "Migrated enterprise operations to a secure and scalable cloud network infrastructure.",
-    client: "DEF Industries",
-    duration: "5 Months",
+      "Established complete IT infrastructure and networking solutions. Implemented EPABX and nurse call systems for hospital operations.",
+    client: "Life Line Hospital",
     status: "Completed",
   },
   {
-    name: "CCTV Surveillance for GHI Factory",
+    name: "KK Thorat Construction Company",
     image: cctv2Image,
     description:
-      "Implemented a 24/7 surveillance system with remote monitoring for industrial safety.",
-    client: "GHI Factory",
-    duration: "3 Months",
+      "Executed networking and EPABX system installations across multiple office locations. Implemented Point-to-Point connectivity in the company’s stone crusher unit and office areas.",
+    client: "KK Thorat Construction",
     status: "Completed",
   },
 ];
@@ -58,12 +63,16 @@ function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div id="projects" className="bg-[#ecf8f8] pt-20 px-6 text-center items-center">
-      <div className="text-center mb-8">
-        <h1 className="inline-block text-black px-8 py-3 text-[20px] md:text-2xl font-bold rounded-lg ">
-          Our Projects
-        </h1>
-      </div>
+    <div id="projects" className="bg-[#ecf8f8] py-20 px-6 text-center">
+      {/* Section Title */}
+      <motion.h1
+        className="text-black text-2xl md:text-3xl font-bold mb-6"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Our Projects
+      </motion.h1>
 
       <p className="text-gray-600 text-lg max-w-3xl mx-auto">
         We have successfully completed numerous projects across networking,
@@ -73,12 +82,20 @@ function Projects() {
         30+ Happy Customers 🚀
       </h3>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-        {projectsData.slice(0, 3).map((project, index) => (
-          <div
+      {/* Projects Grid */}
+      <motion.div
+        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        {projectsData.map((project, index) => (
+          <motion.div
             key={index}
             className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer transform hover:scale-105 transition duration-300"
-            onClick={() => setSelectedProject(project)}>
+            onClick={() => setSelectedProject(project)}
+            whileHover={{ scale: 1.05 }}
+          >
             <img
               src={project.image}
               alt={project.name}
@@ -92,23 +109,24 @@ function Projects() {
                 {project.description}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <button
-        className="mt-6 bg-[#326273] text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700 transition"
-        onClick={() => setSelectedProject(projectsData[3])}>
-        View More Projects
-      </button>
-
+      {/* Modal Popup */}
       {selectedProject && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-6">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <button
               className="absolute top-2 right-4 text-gray-600 text-2xl"
-              onClick={() => setSelectedProject(null)}>
-              &times;
+              onClick={() => setSelectedProject(null)}
+            >
+              <FaTimes />
             </button>
             <img
               src={selectedProject.image}
@@ -123,12 +141,9 @@ function Projects() {
               <strong>Client:</strong> {selectedProject.client}
             </p>
             <p className="text-gray-700">
-              <strong>Duration:</strong> {selectedProject.duration}
-            </p>
-            <p className="text-gray-700">
               <strong>Status:</strong> {selectedProject.status}
             </p>
-          </div>
+          </motion.div>
         </div>
       )}
     </div>

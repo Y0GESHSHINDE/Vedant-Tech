@@ -28,7 +28,7 @@ const ContactUs = () => {
 
     try {
       // Send data to FormSubmit API
-      const response = await fetch("https://formsubmit.co/ys795702@gmail.com", {
+      const response = await fetch("https://formsubmit.co/vedanttech40@gmail.com", {
         method: "POST",
         body: form,
       });
